@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Downloader</title>
+    <link rel="stylesheet" href="driveUrl.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Video Downloader</h1>
+        <form id="videoForm">
+            <label for="videoUrl">Enter Video URL:</label>
+            <input type="text" id="videoUrl" name="videoUrl" placeholder="https://drive.google.com/...">
+            <button type="submit">Download Video</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('videoForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const videoUrl = document.getElementById('videoUrl').value;
+            console.log('Video URL:', videoUrl);
+        });
+    </script>
+</body>
+</html>
